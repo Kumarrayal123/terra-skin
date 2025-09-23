@@ -33,14 +33,14 @@ const HeroSlider: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="relative h-[70vh] bg-gray-100 flex items-center justify-center">
+      <div className="relative h-[80vh] md:h-screen bg-gray-100 flex items-center justify-center">
         <div className="animate-pulse">Loading...</div>
       </div>
     );
   }
 
   return (
-    <div className="relative h-[70vh] overflow-hidden">
+    <div className="relative h-[80vh] md:h-screen overflow-hidden">
       {heroSlides.map((slide, index) => (
         <div
           key={slide.id}

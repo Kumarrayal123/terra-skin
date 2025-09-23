@@ -24,7 +24,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <span className="text-2xl font-bold text-[#8d4745] font-['Playfair_Display']">
-              LuxeSkin
+              TerraSkin
             </span>
           </Link>
 

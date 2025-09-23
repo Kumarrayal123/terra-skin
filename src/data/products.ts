@@ -1,4 +1,15 @@
 import { Product, Testimonial } from '../types';
+import img from '../images/hero-1.png';
+import p from '../images/p-1.jpg';
+import p1 from '../images/p-2.jpg';
+import p2 from '../images/p-3.jpg';
+import p3 from '../images/p-4.jpg';
+import p4 from '../images/p-5.jpg';
+import p5 from '../images/p-6.jpg';
+import p6 from '../images/p-7.jpg';
+import p7 from '../images/p-8.jpg';
+import p8 from '../images/p-9.jpg';
+import p9 from '../images/p-10.jpg';
 
 export const products: Product[] = [
   {
@@ -8,9 +19,8 @@ export const products: Product[] = [
     fullDescription: 'Our premium Vitamin C serum combines 20% L-Ascorbic Acid with Vitamin E and Ferulic Acid to deliver maximum brightening power. This potent formula helps reduce dark spots, even skin tone, and protect against environmental damage while promoting collagen synthesis for firmer, more youthful-looking skin.',
     price: 89.99,
     originalPrice: 109.99,
-    images: [
-      'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/5938435/pexels-photo-5938435.jpeg?auto=compress&cs=tinysrgb&w=800'
+    images: [ p,p1
+      
     ],
     category: 'serums',
     skinType: ['normal', 'dry', 'combination'],
@@ -27,9 +37,8 @@ export const products: Product[] = [
     description: 'Deep hydration for plump, supple skin',
     fullDescription: 'Experience intense hydration with our lightweight yet nourishing moisturizer. Formulated with multiple molecular weights of Hyaluronic Acid, this cream penetrates deeply to maintain optimal skin moisture levels while strengthening the skin barrier.',
     price: 65.99,
-    images: [
-      'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/6621459/pexels-photo-6621459.jpeg?auto=compress&cs=tinysrgb&w=800'
+    images: [ p2,p3
+     
     ],
     category: 'moisturizers',
     skinType: ['dry', 'sensitive', 'normal'],
@@ -46,9 +55,8 @@ export const products: Product[] = [
     description: 'Remove impurities without stripping moisture',
     fullDescription: 'Our sulfate-free cleansing formula gently removes makeup, dirt, and pollutants while maintaining your skins natural moisture balance. Enriched with botanical extracts and amino acids, it leaves skin feeling clean, soft, and refreshed.',
     price: 42.99,
-    images: [
-      'https://images.pexels.com/photos/6621447/pexels-photo-6621447.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/5938322/pexels-photo-5938322.jpeg?auto=compress&cs=tinysrgb&w=800'
+    images: [ p4,p5
+     
     ],
     category: 'cleansers',
     skinType: ['sensitive', 'dry', 'normal'],
@@ -66,9 +74,8 @@ export const products: Product[] = [
     fullDescription: 'Transform your skin overnight with our encapsulated retinol treatment. This advanced formula delivers time-released retinol to minimize irritation while maximizing anti-aging benefits. Wake up to smoother, firmer, more radiant skin.',
     price: 125.99,
     originalPrice: 149.99,
-    images: [
-      'https://images.pexels.com/photos/5938392/pexels-photo-5938392.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=800'
+    images: [ p6,p7
+     
     ],
     category: 'treatments',
     skinType: ['normal', 'combination', 'mature'],
@@ -85,9 +92,8 @@ export const products: Product[] = [
     description: 'Minimize pores and control excess oil',
     fullDescription: 'Our concentrated niacinamide serum helps regulate oil production, minimize the appearance of pores, and improve overall skin texture. This lightweight formula absorbs quickly and works well under makeup.',
     price: 48.99,
-    images: [
-      'https://images.pexels.com/photos/6621302/pexels-photo-6621302.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/5938365/pexels-photo-5938365.jpeg?auto=compress&cs=tinysrgb&w=800'
+    images: [ p8,p9
+     
     ],
     category: 'serums',
     skinType: ['oily', 'combination', 'acne-prone'],
@@ -163,7 +169,7 @@ export const heroSlides = [
   },
   {
     id: '3',
-    image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: img,
     title: 'Your Best Skin Awaits',
     subtitle: 'Transform your routine with our bestselling products',
     buttonText: 'Shop Bestsellers'
