@@ -10,6 +10,7 @@ import p6 from '../images/p-7.jpg';
 import p7 from '../images/p-8.jpg';
 import p8 from '../images/p-9.jpg';
 import p9 from '../images/p-10.jpg';
+import image from '../images/2.jpg';
 
 export const products: Product[] = [
   {
@@ -162,7 +163,7 @@ export const heroSlides = [
   },
   {
     id: '2',
-    image: 'https://images.pexels.com/photos/5938392/pexels-photo-5938392.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: image,
     title: 'Science Meets Nature',
     subtitle: 'Clinically proven ingredients with natural extracts',
     buttonText: 'Learn More'
