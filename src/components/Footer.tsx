@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
             <h3 className="mb-4">
-              <img
+              <img 
                 src={logo}
                 alt="LuxeSkin Logo"
-                className="h-[200px] w-auto" // adjust size
+                className="h-[200px] w-auto logo" // adjust size
               />
             </h3>
 

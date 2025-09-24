@@ -34,11 +34,12 @@ const Header: React.FC = () => {
               alt="TerraSkin Logo"
               className="h-[150px] w-[120px]"
             /> */}
-            <img 
-  src={logo} 
-  alt="TerraSkin Logo" 
-  className="h-[170px] w-auto" 
-/>
+            <img
+              src={logo}
+              alt="TerraSkin Logo"
+              className="h-[170px] w-auto mr-0"
+            />
+
 
 
           </Link>
@@ -51,8 +52,8 @@ const Header: React.FC = () => {
                 key={item.name}
                 to={item.href}
                 className={`${isActive(item.href)
-                    ? 'text-[#8d4745] border-b-2 border-[#8d4745]'
-                    : 'text-gray-700 hover:text-[#8d4745]'
+                  ? 'text-[#8d4745] border-b-2 border-[#8d4745]'
+                  : 'text-gray-700 hover:text-[#8d4745]'
                   } px-3 py-2 text-sm font-medium transition-colors duration-200`}
               >
                 {item.name}
@@ -100,8 +101,8 @@ const Header: React.FC = () => {
                 key={item.name}
                 to={item.href}
                 className={`${isActive(item.href)
-                    ? 'text-[#8d4745] bg-gray-50'
-                    : 'text-gray-700 hover:text-[#8d4745] hover:bg-gray-50'
+                  ? 'text-[#8d4745] bg-gray-50'
+                  : 'text-gray-700 hover:text-[#8d4745] hover:bg-gray-50'
                   } block px-3 py-2 text-base font-medium transition-colors duration-200`}
                 onClick={() => setIsMenuOpen(false)}
               >

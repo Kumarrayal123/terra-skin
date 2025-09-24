@@ -235,3 +235,6 @@ textarea:focus-visible {
   width: max-content;
   animation: scroll 20s linear infinite;
 }
+.logo{
+  margin-right: 5px;
+}
