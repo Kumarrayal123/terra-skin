@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, X, Search, User } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import logo from "../images/logo-1.png";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +23,26 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          {/* <Link to="/" className="flex items-center">
             <span className="text-2xl font-bold text-[#8d4745] font-['Playfair_Display']">
               TerraSkin
             </span>
+          </Link> */}
+          <Link to="/" className="flex items-center">
+            {/* <img
+              src={logo}
+              alt="TerraSkin Logo"
+              className="h-[150px] w-[120px]"
+            /> */}
+            <img 
+  src={logo} 
+  alt="TerraSkin Logo" 
+  className="h-[170px] w-auto" 
+/>
+
+
           </Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
@@ -34,11 +50,10 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`${
-                  isActive(item.href)
+                className={`${isActive(item.href)
                     ? 'text-[#8d4745] border-b-2 border-[#8d4745]'
                     : 'text-gray-700 hover:text-[#8d4745]'
-                } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                  } px-3 py-2 text-sm font-medium transition-colors duration-200`}
               >
                 {item.name}
               </Link>
@@ -84,11 +99,10 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`${
-                  isActive(item.href)
+                className={`${isActive(item.href)
                     ? 'text-[#8d4745] bg-gray-50'
                     : 'text-gray-700 hover:text-[#8d4745] hover:bg-gray-50'
-                } block px-3 py-2 text-base font-medium transition-colors duration-200`}
+                  } block px-3 py-2 text-base font-medium transition-colors duration-200`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
+import logo from "../images/logo-1.png"
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -19,14 +20,19 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-4">
-              LuxeSkin
+            <h3 className="mb-4">
+              <img
+                src={logo}
+                alt="LuxeSkin Logo"
+                className="h-[200px] w-auto" // adjust size
+              />
             </h3>
+
             <p className="text-gray-300 mb-6 max-w-md">
-              Discover the power of premium skincare with our scientifically-formulated products. 
+              Discover the power of premium skincare with our scientifically-formulated products.
               Transform your routine and reveal your skin's natural radiance.
             </p>
-            
+
             {/* Newsletter Signup */}
             <div>
               <h4 className="text-lg font-semibold mb-3">Stay in the Loop</h4>
@@ -109,7 +115,7 @@ const Footer: React.FC = () => {
           <div className="text-gray-300 text-sm mb-4 md:mb-0">
             © 2025 The Patterns Company. All rights reserved.
           </div>
-          
+
           {/* Social Media */}
           <div className="flex space-x-4">
             <a href="#" className="text-gray-300 hover:text-[#8d4745] transition-colors duration-200">
