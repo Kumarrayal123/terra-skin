@@ -207,19 +207,95 @@ const ShopPage: React.FC = () => {
       </div>
 
       {/* Mobile filter overlay */}
-      {showFilters && (
-        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
-          <div className="bg-white w-80 h-full overflow-y-auto">
-            <div className="p-4 border-b flex items-center justify-between">
-              <h3 className="text-lg font-semibold">Filters</h3>
-              <button onClick={() => setShowFilters(false)}>
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-            {/* Reuse the same filter content here */}
+       {showFilters && (
+  <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
+    <div className="bg-white w-80 h-full overflow-y-auto shadow-lg">
+      <div className="p-4 border-b flex items-center justify-between">
+        <h3 className="text-lg font-semibold">Filters</h3>
+        <button onClick={() => setShowFilters(false)}>
+          <X className="h-5 w-5" />
+        </button>
+      </div>
+
+      {/* Filter Content */}
+      <div className="p-6 space-y-6">
+        {/* Category Filter */}
+        <div>
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">Category</h4>
+          <div className="space-y-2">
+            {categories.map(category => (
+              <label key={category} className="flex items-center">
+                <input
+                  type="radio"
+                  name="category"
+                  value={category}
+                  checked={filters.category === category}
+                  onChange={(e) => handleFilterChange('category', e.target.value)}
+                  className="text-[#8d4745] focus:ring-[#8d4745]"
+                />
+                <span className="ml-2 text-sm text-gray-600 capitalize">{category}</span>
+              </label>
+            ))}
           </div>
         </div>
-      )}
+
+        {/* Price Range */}
+        <div>
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">Price Range</h4>
+          <input
+            type="range"
+            min="0"
+            max="200"
+            value={filters.priceRange[1]}
+            onChange={(e) => handleFilterChange('priceRange', [0, parseInt(e.target.value)])}
+            className="w-full accent-[#8d4745]"
+          />
+          <div className="flex justify-between text-sm text-gray-600">
+            <span>$0</span>
+            <span>${filters.priceRange[1]}</span>
+          </div>
+        </div>
+
+        {/* Skin Type */}
+        <div>
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">Skin Type</h4>
+          <select
+            value={filters.skinType}
+            onChange={(e) => handleFilterChange('skinType', e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-[#8d4745] focus:border-[#8d4745]"
+          >
+            {skinTypes.map(type => (
+              <option key={type} value={type}>
+                {type === 'all' ? 'All Skin Types' : type.charAt(0).toUpperCase() + type.slice(1)}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Best Sellers */}
+        <div>
+          <label className="flex items-center">
+            <input
+              type="checkbox"
+              checked={filters.bestSellers}
+              onChange={(e) => handleFilterChange('bestSellers', e.target.checked)}
+              className="text-[#8d4745] focus:ring-[#8d4745]"
+            />
+            <span className="ml-2 text-sm text-gray-600">Best Sellers Only</span>
+          </label>
+        </div>
+
+        <button
+          onClick={() => setShowFilters(false)}
+          className="w-full bg-[#8d4745] text-white py-2 rounded-lg hover:bg-[#7a3f3d] transition-colors duration-300"
+        >
+          Apply Filters
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

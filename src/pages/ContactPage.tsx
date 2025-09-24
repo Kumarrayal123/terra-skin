@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Plus, Minus } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 
 const ContactPage: React.FC = () => {
@@ -10,6 +10,8 @@ const ContactPage: React.FC = () => {
     message: ''
   });
 
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -19,11 +21,29 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We\'ll get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
+
+  const faqs = [
+    {
+      question: "How do I choose the right products for my skin type?",
+      answer: "We recommend starting with our skin quiz or booking a virtual consultation with our skincare experts. Each product page also lists suitable skin types to help guide your selection.",
+    },
+    {
+      question: "Are your products cruelty-free?",
+      answer: "Yes, all LuxeSkin products are 100% cruelty-free. We never test on animals and work only with suppliers who share our ethical values.",
+    },
+    {
+      question: "What is your return policy?",
+      answer: "We offer a 30-day satisfaction guarantee. If you're not completely happy with your purchase, you can return it for a full refund within 30 days of delivery.",
+    },
+    {
+      question: "How long does shipping take?",
+      answer: "Standard shipping typically takes 3-5 business days within the continental US. We also offer expedited shipping options at checkout.",
+    },
+  ];
 
   return (
     <div className="pt-16">
@@ -39,7 +59,7 @@ const ContactPage: React.FC = () => {
         </div>
       </AnimatedSection>
 
-      {/* Contact Information */}
+      {/* Contact Information + Form */}
       <AnimatedSection animation="slide-up" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -81,7 +101,7 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                     Subject *
@@ -102,7 +122,7 @@ const ContactPage: React.FC = () => {
                     <option value="other">Other</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
@@ -118,7 +138,7 @@ const ContactPage: React.FC = () => {
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   className="w-full bg-[#8d4745] text-white py-3 px-6 rounded-lg hover:bg-[#7a3f3d] transition-colors duration-300 font-semibold"
@@ -147,8 +167,7 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Visit Our Store</h3>
                       <p className="text-gray-600">
-                        123 Beauty Boulevard<br />
-                        Los Angeles, CA 90210
+                        Hyderabad, Telangana, India
                       </p>
                     </div>
                   </div>
@@ -160,8 +179,7 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
                       <p className="text-gray-600">
-                        (555) 123-4567<br />
-                        Mon-Fri, 9AM-6PM PST
+                        +91-9834763423
                       </p>
                     </div>
                   </div>
@@ -173,7 +191,7 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email Us</h3>
                       <p className="text-gray-600">
-                        hello@luxeskin.com<br />
+                        info@terraskin.com<br />
                         We'll respond within 24 hours
                       </p>
                     </div>
@@ -186,9 +204,7 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Store Hours</h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 9:00 AM - 7:00 PM<br />
-                        Saturday: 10:00 AM - 6:00 PM<br />
-                        Sunday: 11:00 AM - 5:00 PM
+                        Monday - Friday: 9:00 AM - 7:00 PM
                       </p>
                     </div>
                   </div>
@@ -230,12 +246,12 @@ const ContactPage: React.FC = () => {
           <div className="text-center text-gray-600">
             <MapPin className="h-12 w-12 mx-auto mb-4" />
             <p>Interactive map would be integrated here</p>
-            <p className="text-sm">123 Beauty Boulevard, Los Angeles, CA 90210</p>
+            <p className="text-sm">Hyderabad, Telangana, India</p>
           </div>
         </div>
       </AnimatedSection>
 
-      {/* FAQ Section */}
+      {/* FAQ Section with Accordion */}
       <AnimatedSection animation="slide-up" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -247,28 +263,33 @@ const ContactPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="space-y-6">
-            {[
-              {
-                question: "How do I choose the right products for my skin type?",
-                answer: "We recommend starting with our skin quiz or booking a virtual consultation with our skincare experts. Each product page also lists suitable skin types to help guide your selection."
-              },
-              {
-                question: "Are your products cruelty-free?",
-                answer: "Yes, all LuxeSkin products are 100% cruelty-free. We never test on animals and work only with suppliers who share our ethical values."
-              },
-              {
-                question: "What is your return policy?",
-                answer: "We offer a 30-day satisfaction guarantee. If you're not completely happy with your purchase, you can return it for a full refund within 30 days of delivery."
-              },
-              {
-                question: "How long does shipping take?",
-                answer: "Standard shipping typically takes 3-5 business days within the continental US. We also offer expedited shipping options at checkout."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-sm border"
+              >
+                <button
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                  className="w-full flex justify-between items-center p-6 text-left"
+                >
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {faq.question}
+                  </h3>
+                  {openIndex === index ? (
+                    <Minus className="w-5 h-5 text-gray-600" />
+                  ) : (
+                    <Plus className="w-5 h-5 text-gray-600" />
+                  )}
+                </button>
+
+                {openIndex === index && (
+                  <div className="px-6 pb-6 text-gray-600">
+                    {faq.answer}
+                  </div>
+                )}
               </div>
             ))}
           </div>

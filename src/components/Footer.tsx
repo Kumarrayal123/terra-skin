@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
         {/* Bottom section */}
         <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-300 text-sm mb-4 md:mb-0">
-            © 2025 LuxeSkin. All rights reserved.
+            © 2025 The Patterns Company. All rights reserved.
           </div>
           
           {/* Social Media */}
