@@ -167,12 +167,13 @@ const ProductDetails: React.FC = () => {
 
               <div className="flex items-center mb-6">
                 <span className="text-3xl font-bold text-[#8d4745]">
-                  ${product.price}
+                  ₹{product.price}
                 </span>
                 {product.originalPrice && (
                   <span className="ml-3 text-xl text-gray-500 line-through">
-                    ${product.originalPrice}
+                    ₹{product.originalPrice}
                   </span>
+
                 )}
               </div>
 
@@ -237,7 +238,7 @@ const ProductDetails: React.FC = () => {
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab as any)}
-                      className={`text-sm font-medium capitalize pb-2 border-b-2 transition-colors duration-200 ${
+                      className={`text-sm font-medium capitalize pb-2 border-b-2 transition-colors duration-200 ₹{
                         activeTab === tab
                           ? 'text-[#8d4745] border-[#8d4745]'
                           : 'text-gray-600 border-transparent hover:text-gray-900'

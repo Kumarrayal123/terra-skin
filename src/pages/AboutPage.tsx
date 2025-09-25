@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
       <AnimatedSection className="bg-gradient-to-r from-[#8d4745] to-[#a05552] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold font-['Playfair_Display'] mb-6">
-            About LuxeSkin
+            About TerraSkin 
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
             Transforming skincare with science-backed formulations and natural ingredients since 2015
@@ -21,11 +21,11 @@ const AboutPage: React.FC = () => {
       <AnimatedSection animation="slide-up" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-['Playfair_Display'] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-6">
               Our Story
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Founded by dermatologist Dr. Sarah Chen, LuxeSkin was born from a passion for creating 
+              Founded by dermatologist Tanuja, TerraSkin was born from a passion for creating 
               effective, gentle skincare solutions that work in harmony with your skin's natural processes. 
               After years of research and development, we've crafted a collection of products that combine 
               the best of nature and science.
@@ -42,7 +42,7 @@ const AboutPage: React.FC = () => {
             </AnimatedSection>
             <AnimatedSection animation="slide-left">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-[#8d4745] mb-4">Our Mission</h3>
                 <p className="text-gray-600 mb-6">
                   We believe that everyone deserves healthy, radiant skin. Our mission is to provide 
                   premium skincare products that deliver real results while being gentle on your skin 
@@ -72,7 +72,7 @@ const AboutPage: React.FC = () => {
       <AnimatedSection className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-['Playfair_Display'] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-4">
               Our Values
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -88,7 +88,7 @@ const AboutPage: React.FC = () => {
                 description: 'We never compromise on the quality of our ingredients or formulations'
               },
               {
-                icon: <Heart className="h-8 w-8" />,
+                icon: <Heart className="h-8 w-8 " />,
                 title: 'Skin Health',
                 description: 'Every product is designed to support and improve your skin\'s natural health'
               },
@@ -121,7 +121,7 @@ const AboutPage: React.FC = () => {
       <AnimatedSection animation="slide-up" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-['Playfair_Display'] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-4">
               Meet Our Team
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -132,7 +132,7 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Dr. Sarah Chen',
+                name: 'Dr.Tanuja',
                 role: 'Founder & Chief Dermatologist',
                 image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
                 bio: 'Board-certified dermatologist with 15+ years of experience in clinical research'

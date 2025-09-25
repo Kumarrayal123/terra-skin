@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
-import logo from "../images/logo-1.png"
+import logo from "../images/terra-skin-logo.png"
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
         <img
           src={logo}
           alt="LuxeSkin Logo"
-          className="h-[200px] w-auto mb-4" // keep only bottom margin
+          className="h-[100px] w-auto mb-4" // keep only bottom margin
         />
 
         {/* Brand text */}

@@ -11,6 +11,7 @@ import p7 from '../images/p-8.jpg';
 import p8 from '../images/p-9.jpg';
 import p9 from '../images/p-10.jpg';
 import image from '../images/2.jpg';
+import video from "../images/video/terraskin.mp4";
 
 export const products: Product[] = [
   {
@@ -156,23 +157,23 @@ export const testimonials: Testimonial[] = [
 export const heroSlides = [
   {
     id: '1',
-    image: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: video,
     title: 'Discover Radiant Skin',
     subtitle: 'Premium skincare solutions for every skin type',
     buttonText: 'Shop Collection'
   },
-  {
-    id: '2',
-    image: image,
-    title: 'Science Meets Nature',
-    subtitle: 'Clinically proven ingredients with natural extracts',
-    buttonText: 'Learn More'
-  },
-  {
-    id: '3',
-    image: img,
-    title: 'Your Best Skin Awaits',
-    subtitle: 'Transform your routine with our bestselling products',
-    buttonText: 'Shop Bestsellers'
-  }
+  // {
+  //   id: '2',
+  //   image: image,
+  //   title: 'Science Meets Nature',
+  //   subtitle: 'Clinically proven ingredients with natural extracts',
+  //   buttonText: 'Learn More'
+  // },
+  // {
+  //   id: '3',
+  //   image: img,
+  //   title: 'Your Best Skin Awaits',
+  //   subtitle: 'Transform your routine with our bestselling products',
+  //   buttonText: 'Shop Bestsellers'
+  // }
 ];

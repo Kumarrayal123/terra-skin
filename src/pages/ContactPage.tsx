@@ -33,7 +33,7 @@ const ContactPage: React.FC = () => {
     },
     {
       question: "Are your products cruelty-free?",
-      answer: "Yes, all LuxeSkin products are 100% cruelty-free. We never test on animals and work only with suppliers who share our ethical values.",
+      answer: "Yes, all TerraSkin products are 100% cruelty-free. We never test on animals and work only with suppliers who share our ethical values.",
     },
     {
       question: "What is your return policy?",
@@ -65,7 +65,7 @@ const ContactPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 font-['Playfair_Display'] mb-6">
+              <h2 className="text-3xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-6">
                 Send us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -151,7 +151,7 @@ const ContactPage: React.FC = () => {
             {/* Contact Information */}
             <AnimatedSection animation="slide-left">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 font-['Playfair_Display'] mb-6">
+                <h2 className="text-3xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-6">
                   Get in Touch
                 </h2>
                 <p className="text-gray-600 mb-8">
@@ -255,7 +255,7 @@ const ContactPage: React.FC = () => {
       <AnimatedSection animation="slide-up" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 font-['Playfair_Display'] mb-4">
+            <h2 className="text-3xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600">

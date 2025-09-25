@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, X, Search, User } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-import logo from "../images/logo-1.png";
+import logo from "../images/terra-skin-logo.png";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
             <img
               src={logo}
               alt="TerraSkin Logo"
-              className="h-[170px] w-auto mr-0"
+              className="h-[70px] w-auto"
             />
 
 
