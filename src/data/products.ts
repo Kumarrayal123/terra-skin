@@ -36,7 +36,7 @@ export const products: Product[] = [
   {
     id: '2',
     name: 'Hyaluronic Acid Moisturizer',
-    description: 'Deep hydration for plump, supple skin',
+    description: 'Deep hydration treatment crafted for plump, supple skin care',
     fullDescription: 'Experience intense hydration with our lightweight yet nourishing moisturizer. Formulated with multiple molecular weights of Hyaluronic Acid, this cream penetrates deeply to maintain optimal skin moisture levels while strengthening the skin barrier.',
     price: 65.99,
     images: [ p2,p3

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Award, Heart, Leaf, Users } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
+import abt from "../images/about-us.png";
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="pt-16">
+    <div style={{backgroundColor:'#f4ece6'}} className="pt-16">
       {/* Hero Section */}
       <AnimatedSection className="bg-gradient-to-r from-[#8d4745] to-[#a05552] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -35,7 +36,7 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="slide-right">
               <img
-                src="https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={abt}
                 alt="Skincare laboratory"
                 className="rounded-lg shadow-lg"
               />
@@ -69,7 +70,7 @@ const AboutPage: React.FC = () => {
       </AnimatedSection>
 
       {/* Values */}
-      <AnimatedSection className="py-16 bg-gray-50">
+      <AnimatedSection className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-4">

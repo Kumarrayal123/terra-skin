@@ -84,12 +84,12 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div style={{backgroundColor:'#f4ece6'}} className="pt-16 text-[#f4ece6]">
       {/* Hero Slider */}
       <HeroSlider />
 
       {/* Features Section */}
-      <AnimatedSection className="py-16 bg-gray-50">
+      <AnimatedSection className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -118,7 +118,7 @@ const HomePage: React.FC = () => {
         </div>
       </AnimatedSection>
       {/* About section */}
-      <section className="w-full bg-white py-20 px-6">
+      <section className="w-full py-20 px-6">
         <div className="max-w-7xl mx-auto">
 
           {/* Section Title */}
@@ -268,7 +268,7 @@ const HomePage: React.FC = () => {
         </div>
       </AnimatedSection>
 
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <h2 className="text-3xl font-semibold text-[#8d4745] mb-8 text-center">
           Shop by Concern
         </h2>
@@ -277,7 +277,7 @@ const HomePage: React.FC = () => {
             {concerns.map((concern) => (
               <div
                 key={concern.id}
-                className="min-w-[250px] flex-shrink-0 rounded-lg overflow-hidden"
+                className="min-w-[250px] flex-shrink-0 rounded-lg overflow-hidden text-[#8d4745]"
               >
                 <img
                   src={concern.img}
@@ -292,7 +292,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <AnimatedSection animation="fade-in" className="py-16 bg-gray-50">
+      <AnimatedSection animation="fade-in" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-4">
@@ -331,7 +331,7 @@ const HomePage: React.FC = () => {
         </div>
       </AnimatedSection>
 
-      <section className="w-full bg-white py-16 px-6">
+      <section className="w-full  py-16 px-6">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold text-[#8d4745] ">
             Follow us On Instagram

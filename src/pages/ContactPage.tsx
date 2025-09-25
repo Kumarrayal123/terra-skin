@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div style={{backgroundColor:'#f4ece6'}} className="pt-16">
       {/* Hero Section */}
       <AnimatedSection className="bg-gradient-to-r from-[#8d4745] to-[#a05552] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -252,7 +252,7 @@ const ContactPage: React.FC = () => {
       </AnimatedSection>
 
       {/* FAQ Section with Accordion */}
-      <AnimatedSection animation="slide-up" className="py-16 bg-gray-50">
+      <AnimatedSection animation="slide-up" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#8d4745] font-['Playfair_Display'] mb-4">
