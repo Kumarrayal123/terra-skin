@@ -127,7 +127,7 @@ const HomePage: React.FC = () => {
               About <span className="text-[#8d4745]">Us</span>
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Founded by dermatologist Dr. Sarah Chen, LuxeSkin was born from a passion for creating effective, gentle skincare solutions that work in harmony with your skin's natural processes.
+              Founded by dermatologist Dr.Tanuja, TerraSkin was born from a passion for creating effective, gentle skincare solutions that work in harmony with your skin's natural processes.
             </p>
           </div>
 
