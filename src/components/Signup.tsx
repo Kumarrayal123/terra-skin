@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // ✅ make sure this is imported
 
 const Signup: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -12,8 +14,21 @@ const Signup: React.FC = () => {
     // Save user to localStorage (replace with API call in real app)
     localStorage.setItem("user", JSON.stringify({ email, password }));
 
-    alert("Signup successful! Please log in.");
-    navigate("/login"); // ✅ redirect to login after signup
+    // Show toast notification
+    toast.success("Signup successful! Please log in.", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+    // Redirect after a short delay to allow toast to show
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
   };
 
   return (
@@ -51,8 +66,12 @@ const Signup: React.FC = () => {
           </Link>
         </p>
       </div>
+
+      {/* ✅ Toast container to show notifications */}
+      <ToastContainer />
     </div>
   );
 };
 
 export default Signup;
+

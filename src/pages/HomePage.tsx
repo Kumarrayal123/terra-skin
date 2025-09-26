@@ -215,11 +215,14 @@ const HomePage: React.FC = () => {
                 key={index}
                 className="bg-[#f4ece6] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-500"
               >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-64 object-cover rounded-t-xl"
-                />
+                <Link to="./shop">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-64 object-cover rounded-t-xl"
+                  />
+                </Link>
+
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-semibold text-[#6b4226] mb-3">
                     {item.title}
@@ -283,11 +286,14 @@ const HomePage: React.FC = () => {
                 key={concern.id}
                 className="min-w-[250px] flex-shrink-0 rounded-lg overflow-hidden text-[#8d4745]"
               >
+                <Link to="./shop">
                 <img
                   src={concern.img}
                   alt={concern.label}
                   className="w-full h-64 object-cover"
                 />
+                </Link>
+         
                 <p className="text-center font-bold mt-2">{concern.label}</p>
               </div>
             ))}
