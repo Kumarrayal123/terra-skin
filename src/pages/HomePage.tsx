@@ -77,14 +77,14 @@ const HomePage: React.FC = () => {
     { src: img10, alt: "Instagram post 3" },
     { src: img11, alt: "Instagram post 3" },
     { src: img12, alt: "Instagram post 3" },
-  
+
 
 
 
   ];
 
   return (
-    <div style={{backgroundColor:'#f4ece6'}} className="pt-16 text-[#f4ece6]">
+    <div style={{ backgroundColor: '#f4ece6' }} className="pt-16 text-[#f4ece6]">
       {/* Hero Slider */}
       <HeroSlider />
 
@@ -154,9 +154,13 @@ const HomePage: React.FC = () => {
                 solutions with professionalism and passion, helping businesses achieve
                 growth and success in a competitive world.
               </p>
-              <button className="inline-block px-8 py-3 rounded-lg bg-[#8d4745] text-white hover:bg-[#732f2d] transition-all font-medium shadow-lg">
+              <Link
+                to="/about"
+                className="inline-block px-8 py-3 rounded-lg bg-[#8d4745] text-white hover:bg-[#732f2d] transition-all font-medium shadow-lg"
+              >
                 Read More
-              </button>
+              </Link>
+
             </div>
           </div>
         </div>

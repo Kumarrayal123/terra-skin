@@ -23,25 +23,13 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          {/* <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-[#8d4745] font-['Playfair_Display']">
-              TerraSkin
-            </span>
-          </Link> */}
+
           <Link to="/" className="flex items-center">
-            {/* <img
-              src={logo}
-              alt="TerraSkin Logo"
-              className="h-[150px] w-[120px]"
-            /> */}
             <img
               src={logo}
               alt="TerraSkin Logo"
               className="h-[70px] w-auto"
             />
-
-
-
           </Link>
 
 
@@ -66,9 +54,16 @@ const Header: React.FC = () => {
             <button className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200">
               <Search className="h-5 w-5 text-gray-700" />
             </button>
-            <button className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200">
+            {/* <button className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200">
               <User className="h-5 w-5 text-gray-700" />
-            </button>
+            </button> */}
+            <Link
+              to="/login"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
+            >
+              <User className="h-5 w-5 text-gray-700" />
+            </Link>
+
             <Link
               to="/cart"
               className="relative p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"

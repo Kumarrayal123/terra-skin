@@ -9,6 +9,8 @@ import ProductDetails from './pages/ProductDetails';
 import CartPage from './pages/CartPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
               <Route path="/cart" element={<CartPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path='/login' element={<Login/>}/>
+              <Route path='/signup' element={< Signup/>}/>
             </Routes>
           </main>
           <Footer />

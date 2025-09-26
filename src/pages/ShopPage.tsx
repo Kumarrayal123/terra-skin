@@ -131,8 +131,8 @@ const ShopPage: React.FC = () => {
                       className="w-full accent-[#8d4745]"
                     />
                     <div className="flex justify-between text-sm text-gray-600">
-                      <span>$0</span>
-                      <span>${filters.priceRange[1]}</span>
+                      <span>₹0</span>
+                      <span>₹{filters.priceRange[1]}</span>
                     </div>
                   </div>
                 </div>
