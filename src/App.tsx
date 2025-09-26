@@ -11,6 +11,10 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import PlaceOrderPage from './pages/PlaceOrderPage';
+import "react-toastify/dist/ReactToastify.css";
+import Payment from './pages/Payment';
+
 
 function App() {
   return (
@@ -28,6 +32,8 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path='/login' element={<Login/>}/>
               <Route path='/signup' element={< Signup/>}/>
+              <Route path= '/PlaceOrderPage' element={<PlaceOrderPage/>}/>
+              <Route path='/payment' element={< Payment/>} />
             </Routes>
           </main>
           <Footer />

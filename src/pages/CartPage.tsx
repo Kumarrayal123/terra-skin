@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import AnimatedSection from '../components/AnimatedSection';
+import PlaceOrderPage from './PlaceOrderPage';
 
 const CartPage: React.FC = () => {
   const { state, dispatch } = useCart();
+  const navigate = useNavigate(); // ✅ must be inside component
 
   const updateQuantity = (id: string, quantity: number) => {
     dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
@@ -13,6 +15,10 @@ const CartPage: React.FC = () => {
 
   const removeItem = (id: string) => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: id });
+  };
+
+  const handleCheckout = () => {
+    navigate('/PlaceOrderPage'); // ✅ navigate to Place Order page
   };
 
   if (state.items.length === 0) {
@@ -134,7 +140,10 @@ const CartPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <button className="w-full bg-[#8d4745] text-white py-3 px-6 rounded-full hover:bg-[#7a3f3d] transition-colors duration-300 font-semibold mb-4">
+                <button 
+                  onClick={handleCheckout} 
+                  className="w-full bg-[#8d4745] text-white py-3 px-6 rounded-full hover:bg-[#7a3f3d] transition-colors duration-300 font-semibold mb-4"
+                >
                   Proceed to Checkout
                 </button>
                 
