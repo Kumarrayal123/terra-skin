@@ -27,6 +27,10 @@ import img9 from "../images/terra/9.jpg";
 import img10 from "../images/terra/10.jpg";
 import img11 from "../images/terra/11.jpg";
 import img12 from "../images/terra/12.jpg";
+import c1 from "../images/why-1.webp";
+import c2 from "../images/why-2.webp";
+import c3 from "../images/why-3.webp";
+import c4 from "../images/why-4.webp";
 
 
 const HomePage: React.FC = () => {
@@ -45,6 +49,29 @@ const HomePage: React.FC = () => {
     { id: 8, img: darkCircles, label: "DARK CIRCLES" },
     { id: 9, img: sun, label: "Sun Protection" }
   ];
+
+  const benefits = [
+  {
+    id: 1,
+    title: "",
+    image: c1, // replace with your image path
+  },
+  {
+    id: 2,
+    title: "",
+    image: c2,
+  },
+  {
+    id: 3,
+    title: "",
+    image: c3,
+  },
+  {
+    id: 4,
+    title: "",
+    image: c4,
+  },
+];
 
   const ingredients = [
     {
@@ -203,7 +230,7 @@ const HomePage: React.FC = () => {
 
           {/* Section Title */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#6b4226]">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#6b4226]">
               Our Key Ingredients
             </h2>
           </div>
@@ -252,6 +279,39 @@ const HomePage: React.FC = () => {
           </Link>
         </div>
       </AnimatedSection>
+
+      <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-semibold text-center mb-12 text-[#8d4745]">
+          Why choose Terraskin?
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((benefit) => (
+            <div
+              key={benefit.id}
+              className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300"
+            >
+               <Link to="./shop">
+              <img
+                src={benefit.image}
+                alt={benefit.title}
+                className="w-full h-96 object-cover"
+              />
+              </Link>
+            
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center px-4">
+                <p className="text-white font-semibold text-lg">
+                  {benefit.title}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+
+
 
       {/* Best Sellers */}
       <AnimatedSection animation="slide-up" className="py-16">

@@ -14,6 +14,10 @@ import Signup from './components/Signup';
 import PlaceOrderPage from './pages/PlaceOrderPage';
 import "react-toastify/dist/ReactToastify.css";
 import Payment from './pages/Payment';
+import Orders from "./components/Orders";
+
+
+
 
 
 function App() {
@@ -34,6 +38,9 @@ function App() {
               <Route path='/signup' element={< Signup/>}/>
               <Route path= '/PlaceOrderPage' element={<PlaceOrderPage/>}/>
               <Route path='/payment' element={< Payment/>} />
+              <Route path="/orders" element={<Orders />} />
+           
+              
             </Routes>
           </main>
           <Footer />
