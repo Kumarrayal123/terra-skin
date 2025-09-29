@@ -84,26 +84,26 @@ const Footer: React.FC = () => {
 
       {/* Customer Care */}
       <div>
-        <h4 className="text-lg font-semibold mb-4">Customer Care</h4>
+        <h4 className="text-lg font-semibold mb-4">Products</h4>
         <ul className="space-y-2">
           <li>
             <a href="#" className="text-gray-300 hover:text-[#8d4745] transition-colors duration-200">
-              Shipping Info
+              SkinCare
             </a>
           </li>
           <li>
             <a href="#" className="text-gray-300 hover:text-[#8d4745] transition-colors duration-200">
-              Returns
+              SunScreen
             </a>
           </li>
           <li>
             <a href="#" className="text-gray-300 hover:text-[#8d4745] transition-colors duration-200">
-              Size Guide
+              BodySkin
             </a>
           </li>
           <li>
             <a href="#" className="text-gray-300 hover:text-[#8d4745] transition-colors duration-200">
-              FAQ
+              Moisturizers
             </a>
           </li>
         </ul>
